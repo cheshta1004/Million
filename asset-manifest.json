@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Million/static/css/main.860e9d6c.css",
+    "main.js": "/Million/static/js/main.e62683ec.js",
+    "index.html": "/Million/index.html",
+    "main.860e9d6c.css.map": "/Million/static/css/main.860e9d6c.css.map",
+    "main.e62683ec.js.map": "/Million/static/js/main.e62683ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.860e9d6c.css",
+    "static/js/main.e62683ec.js"
+  ]
+}
