@@ -1,0 +1,336 @@
+.tasks-container {
+  margin-bottom: 20px;
+  width: 300px;
+}
+ 
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.calendar-header span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-day {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px; /* Adjust width to fit your design */
+  height: 100px; /* Adjust height to fit your design */
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.calendar-day.empty {
+  background-color: transparent;
+  border: none;
+}
+
+.calendar-day span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8); /* Add a background to make date readable */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.task-indicators {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+}
+
+.task-indicator {
+  width: 10px; /* Adjust width to fit more indicators horizontally */
+  height: 10px;
+  margin: 1px;
+  border-radius: 2px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+
+ .navbar-color {
+    background-color: #EBEBD3; 
+    color: #000; 
+  }
+
+  .calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%; 
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  .calendar {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#3C3C3B;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+  }
+  
+  .calendar-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .calendar-header button:hover {
+    text-decoration: underline;
+  }
+  
+  .calendar-header span {
+    font-weight: bold;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+  
+  .calendar-day {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    height: 40px;
+  }
+  
+  .calendar-day:hover {
+    background-color:#F5F5F5;
+    color: #3C3C3B;
+    transform: scale(1.05);
+  }
+  
+  .calendar-day.empty {
+    visibility: visible; 
+    pointer-events: none; 
+  }
+
+  .tasks-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .tasks-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .task-input {
+    flex: 1;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .color-select {
+    border-radius: 0;
+    width: 150px;
+  }
+  
+  .add-button {
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .task-item {
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    margin-bottom: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .task-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  } 
+
+
+  /* .calendar-day {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .task-indicators {
+    display: flex;
+    flex-direction: row; 
+    margin-top: 5px;
+  }
+  
+  .task-indicator {
+    width: 10px; 
+    height: 50px;
+    margin: 1px;
+  } */
+  
+
+  .calendar-day {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Adjust width to fit your design */
+    height: 100px; /* Adjust height to fit your design */
+    border: 1px solid #ccc;
+  }
+  
+  .calendar-day span {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8); /* Add a background to make date readable */
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  
+  .task-indicators {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+  }
+  
+  .task-indicator {
+    width: 10px; /* Adjust width to fit more indicators horizontally */
+    height: 30px;
+    margin: 1px;
+  }
+  
